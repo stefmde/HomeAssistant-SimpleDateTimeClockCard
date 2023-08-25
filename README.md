@@ -7,42 +7,41 @@
 
 | Name | Type | Default | Description |
 |--|--|--|--|
-| `global_text_align` | `string` | `center` | |
-| `global_paddingLeft_size` | `string` | `0px` | |
-| `global_paddingRight_size` | `string` | `0px` | |
-| `global_paddingTop_size` | `string` | `15px` | |
-| `global_paddingBottom_size` | `string` | `15px` | |
-| `global_update_interval_ms` | `int` | `1000` | |
+| `global_text_align` | `string` | `center` | Could be `center`, `left` or `right`. The alignment of the text |
+| `global_paddingLeft_size` | `string` | `0px` | Inner space to the left. Unit is up to you |
+| `global_paddingRight_size` | `string` | `0px` | Inner space to the right. Unit is up to you |
+| `global_paddingTop_size` | `string` | `15px` | Inner space to the top. Unit is up to you |
+| `global_paddingBottom_size` | `string` | `15px` | Inner space to the bottom. Unit is up to you |
+| `global_update_interval_ms` | `int` | `1000` | Interval for updating the clock |
 
-  
 
 ### Time
 | Name | Type | Default | Description |
 |--|--|--|--|
-| `time_show` | `bool` | `true` | |
-| `time_font_size` | `string` | `5em` | |
-| `time_hours_24` | `bool` | `true` | |
-| `time_hours_lead_zero` | `bool` | `true` | |
-| `time_minutes_lead_zero` | `bool` | `true` | |
-| `time_seconds_font_size` | `bool` | `true` | |
-| `time_seconds_show` | `bool` | `true` | |
-| `time_seconds_lead_zero` | `bool` | `true` | |
-| `time_seconds_visibility_percentage` | `string` | `100%` | |
+| `time_show` | `bool` | `true` | Sets the visibility of the time |
+| `time_font_size` | `string` | `5em` | Size of the text of the time. Unit is up to you |
+| `time_hours_24` | `bool` | `true` | Enables or disables the clock in 24h style. Else it would be 12h with AM/PM |
+| `time_hours_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
+| `time_minutes_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
+| `time_seconds_font_size` | `bool` | `true` | Size of the text of the seconds. If undefined the value is the same than `time_font_size`. Unit is up to you |
+| `time_seconds_show` | `bool` | `true` | Sets the visibility of the seconds |
+| `time_seconds_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
+| `time_seconds_visibility_percentage` | `string` | `100%` | Can dim the text of the seconds to more match the background |
 
-  
-
+ 
 ### Date
 
 | Name | Type | Default | Description |
 |--|--|--|--|
-| `date_show` | `bool` | `true` | |
-| `date_locale` | `string` | `en-US` | |
-| `date_font_size` | `string` | `2em` | |
-| `date_days_lead_zero` | `bool` | `true` | |
-| `date_week_day_name_show` | `bool` | `true` | |
-| `date_week_day_name_long` | `bool` | `false` | |
-| `date_week_number_show` | `bool` | `false` | |
-| `date_months_lead_zero` | `bool` | `true` | |
+| `date_show` | `bool` | `true` | Sets the visibility of the date |
+| `date_locale` | `string` | `en-US` | The locale is used to translate the name of the week. See `date_week_day_name_show` |
+| `date_font_size` | `string` | `2em` | Size of the text of the date. Unit is up to you |
+| `date_days_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
+| `date_week_day_name_show` | `bool` | `true` | Sets the visibility of the name of the week. |
+| `date_week_day_name_long` | `bool` | `false` | Sets the length of the name of the week. Fri <=> Friday |
+| `date_week_number_show` | `bool` | `false` | Sets the visibility of the week number of the year |
+| `date_months_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
+
 
 ## Samples
 ### My favorit
@@ -52,7 +51,7 @@
 	time_seconds_visibility_percentage: 30%
 	time_seconds_font_size: 0.5em
 	date_week_number_show: true
-    date_locale: de-DE
+
 
 ### No special config
 ![Header image to show a sample of this card](img/no-special-config.png)
@@ -85,4 +84,3 @@
     time_show: false
     date_font_size: 5em
     date_week_day_name_show: true
-
