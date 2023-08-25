@@ -7,25 +7,25 @@ class SimpleDateTimeClockCard extends HTMLElement
             var config = this.config;
             const card = document.createElement('HA-card');
             this.content = document.createElement('div');
-            this.content.style.paddingLeft = this.config.global_paddingLeft_size ? this.config.global_paddingLeft_size : '0px';
-            this.content.style.paddingRight = this.config.global_paddingRight_size ? this.config.global_paddingRight_size : '0px';
-            this.content.style.paddingTop = this.config.global_paddingTop_size ? this.config.global_paddingTop_size : '15px';
-            this.content.style.paddingBottom = this.config.global_paddingBottom_size ? this.config.global_paddingBottom_size : '15px';
-            this.content.style.textAlign = this.config.global_text_align ? this.config.global_text_align : 'center';
+            this.content.style.paddingLeft = this.config.global_paddingLeft_size !== undefined ? this.config.global_paddingLeft_size : '0px';
+            this.content.style.paddingRight = this.config.global_paddingRight_size !== undefined ? this.config.global_paddingRight_size : '0px';
+            this.content.style.paddingTop = this.config.global_paddingTop_size !== undefined ? this.config.global_paddingTop_size : '15px';
+            this.content.style.paddingBottom = this.config.global_paddingBottom_size !== undefined ? this.config.global_paddingBottom_size : '15px';
+            this.content.style.textAlign = this.config.global_text_align !== undefined ? this.config.global_text_align : 'center';
 
             var timeDiv = document.createElement('div');
             timeDiv.style.lineHeight = '1em';
             var dateDiv = document.createElement('div');
             dateDiv.style.lineHeight = '1em';
             
-            timeDiv.style.fontSize = this.config.time_font_size ? this.config.time_font_size : '5em';
-            dateDiv.style.fontSize = this.config.date_font_size ? this.config.date_font_size : '2em';
+            timeDiv.style.fontSize = this.config.time_font_size !== undefined ? this.config.time_font_size : '5em';
+            dateDiv.style.fontSize = this.config.date_font_size !== undefined ? this.config.date_font_size : '2em';
 
             card.appendChild(this.content);
             this.appendChild(card);
             var content = this.content;
             getContent();
-            setInterval(getContent, this.config.global_update_interval_ms ? this.config.global_update_interval_ms : 1000);
+            setInterval(getContent, this.config.global_update_interval_ms !== undefined ? this.config.global_update_interval_ms : 1000);
 
             function getContent()
             {
@@ -40,13 +40,16 @@ class SimpleDateTimeClockCard extends HTMLElement
 
             function getTime(today)
             {
+                let time_show = config.time_show !== undefined ? config.time_show : true;
                 let time_hours_24 = config.time_hours_24 !== undefined ? config.time_hours_24 : true;
                 let time_hours_lead_zero = config.time_hours_lead_zero !== undefined ? config.time_hours_lead_zero : true;
                 let time_minutes_lead_zero = config.time_minutes_lead_zero !== undefined ? config.time_minutes_lead_zero : true;
                 let time_seconds_show = config.time_seconds_show !== undefined ? config.time_seconds_show : true;
                 let time_seconds_lead_zero = config.time_seconds_lead_zero !== undefined ? config.time_seconds_lead_zero : true;
-                let time_seconds_font_size = config.time_seconds_lead_zero !== undefined ? config.time_seconds_font_size : time_font_size;
+                let time_seconds_font_size = config.time_seconds_font_size !== undefined ? config.time_seconds_font_size : config.time_font_size;
                 let time_seconds_visibility_percentage = config.time_seconds_visibility_percentage !== undefined ? config.time_seconds_visibility_percentage : "100%";
+
+                if(!time_show) return "";
 
                 let h = today.getHours();
                 let m = today.getMinutes();
@@ -63,12 +66,12 @@ class SimpleDateTimeClockCard extends HTMLElement
 
                 if(time_seconds_show) // SECONDS
                 {
-                    time_str += "<span style=\"font-size:" + time_seconds_font_size + ";";
+                    time_str += "<span style=\"font-size:" + time_seconds_font_size + "; ";
 
                     // Visibility
                     let foregroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-text-color');
                     let backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-background-color');
-                    time_str += " color: color-mix(in srgb, " + foregroundColor + " " + time_seconds_visibility_percentage + ", " + backgroundColor + ");"
+                    time_str += "color: color-mix(in srgb, " + foregroundColor + " " + time_seconds_visibility_percentage + ", " + backgroundColor + ");"
 
                     time_str += "\">";
                     time_str += ":" + s;
@@ -82,12 +85,15 @@ class SimpleDateTimeClockCard extends HTMLElement
 
             function getDate(today)
             {
+                let date_show = config.date_show !== undefined ? config.date_show : true;
                 let date_locale = config.date_locale !== undefined ? config.date_locale : "en-US";
-                let date_week_day_name_show = config.date_week_day_name_show !== undefined ? config.date_week_day_name_show : false;
+                let date_week_day_name_show = config.date_week_day_name_show !== undefined ? config.date_week_day_name_show : true;
                 let date_week_day_name_long = config.date_week_day_name_long !== undefined ? config.date_week_day_name_long : false;
                 let date_days_lead_zero = config.date_days_lead_zero !== undefined ? config.date_days_lead_zero : true;
                 let date_months_lead_zero = config.date_months_lead_zero !== undefined ? config.date_months_lead_zero : false;
-                let date_week_number_show = config.date_week_number_show !== undefined ? config.date_week_number_show : true;
+                let date_week_number_show = config.date_week_number_show !== undefined ? config.date_week_number_show : false;
+
+                if(!date_show) return "";
 
                 let d = today.getDate(); // the day of the month (from 1-31)
                 let m = today.getMonth(); // the month (from 0-11)
