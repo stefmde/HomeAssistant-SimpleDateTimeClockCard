@@ -1,5 +1,5 @@
 # SimpleDateTimeClockCard for HomeAssistant
-![enter image description here](img/header.jpg)
+![Header image to show a sample of this card](img/header.jpg)
 
 ## Properties
 ### Global
