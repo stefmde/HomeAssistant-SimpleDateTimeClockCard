@@ -52,6 +52,7 @@
 	time_seconds_visibility_percentage: 30%
 	time_seconds_font_size: 0.5em
 	date_week_number_show: true
+    date_locale: de-DE
 
 ### No special config
 ![Header image to show a sample of this card](img/no-special-config.png)
