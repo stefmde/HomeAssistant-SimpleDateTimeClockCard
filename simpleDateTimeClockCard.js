@@ -7,10 +7,10 @@ class SimpleDateTimeClockCard extends HTMLElement
             var config = this.config;
             const card = document.createElement('HA-card');
             this.content = document.createElement('div');
-            this.content.style.paddingLeft = this.config.global_paddingLeft_size !== undefined ? this.config.global_paddingLeft_size : '0px';
-            this.content.style.paddingRight = this.config.global_paddingRight_size !== undefined ? this.config.global_paddingRight_size : '0px';
-            this.content.style.paddingTop = this.config.global_paddingTop_size !== undefined ? this.config.global_paddingTop_size : '15px';
-            this.content.style.paddingBottom = this.config.global_paddingBottom_size !== undefined ? this.config.global_paddingBottom_size : '15px';
+            this.content.style.paddingLeft = this.config.global_padding_left_size !== undefined ? this.config.global_padding_left_size : '0px';
+            this.content.style.paddingRight = this.config.global_padding_right_size !== undefined ? this.config.global_padding_right_size : '0px';
+            this.content.style.paddingTop = this.config.global_padding_top_size !== undefined ? this.config.global_padding_top_size : '15px';
+            this.content.style.paddingBottom = this.config.global_padding_bottom_size !== undefined ? this.config.global_padding_bottom_size : '15px';
             this.content.style.textAlign = this.config.global_text_align !== undefined ? this.config.global_text_align : 'center';
 
             var timeDiv = document.createElement('div');

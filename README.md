@@ -1,6 +1,9 @@
 
-# SimpleDateTimeClockCard for HomeAssistant
+# Simple Date Time Clock Card for HomeAssistant
 ![Header image to show a sample of this card](img/header.png)
+
+## Description
+This card should be an easy to configure and bring you rich features on the same time. Also for that reason you can find all properties to configure, an explanation of them and samples below.
 
 ## Properties
 ### Global
@@ -8,10 +11,10 @@
 | Name | Type | Default | Description |
 |--|--|--|--|
 | `global_text_align` | `string` | `center` | Could be `center`, `left` or `right`. The alignment of the text |
-| `global_paddingLeft_size` | `string` | `0px` | Inner space to the left. Unit is up to you |
-| `global_paddingRight_size` | `string` | `0px` | Inner space to the right. Unit is up to you |
-| `global_paddingTop_size` | `string` | `15px` | Inner space to the top. Unit is up to you |
-| `global_paddingBottom_size` | `string` | `15px` | Inner space to the bottom. Unit is up to you |
+| `global_padding_left_size` | `string` | `0px` | Inner space to the left. Unit is up to you |
+| `global_padding_right_size` | `string` | `0px` | Inner space to the right. Unit is up to you |
+| `global_padding_top_size` | `string` | `15px` | Inner space to the top. Unit is up to you |
+| `global_padding_bottom_size` | `string` | `15px` | Inner space to the bottom. Unit is up to you |
 | `global_update_interval_ms` | `int` | `1000` | Interval for updating the clock |
 
 
