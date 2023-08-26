@@ -55,7 +55,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 ## Samples
 ### My favorit
-![Header image to show a sample of this card](img/header.png)
+![Sample image to show the config](img/header.png)
 
     type: custom:simple-date-time-clock-card
 	time_seconds_visibility_percentage: 30%
@@ -64,13 +64,13 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### No special config
-![Header image to show a sample of this card](img/no-special-config.png)
+![Sample image to show the config](img/no-special-config.png)
 
     type: custom:simple-date-time-clock-card
 
 
 ### US
-![Header image to show a sample of this card](img/us-config.png)
+![Sample image to show the config](img/us-config.png)
 
     type: custom:simple-date-time-clock-card
     date_us_format: true
@@ -79,7 +79,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### Minimal UI
-![Header image to show a sample of this card](img/minimal-ui-config.png)
+![Sample image to show the config](img/minimal-ui-config.png)
 
     type: custom:simple-date-time-clock-card
     time_hours_24: true
@@ -89,7 +89,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### Just the Clock
-![Header image to show a sample of this card](img/just-the-clock-config.png)
+![Sample image to show the config](img/just-the-clock-config.png)
 
     type: custom:simple-date-time-clock-card
     time_hours_24: true
@@ -98,7 +98,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### Just the Date
-![Header image to show a sample of this card](img/just-the-date-config.png)
+![Sample image to show the config](img/just-the-date-config.png)
 
     type: custom:simple-date-time-clock-card
     time_show: false
@@ -107,7 +107,8 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### Separators
-![Header image to show a sample of this card](img/separators-config.png)
+![Sample image to show the config](img/separators-config.png)
+
 Please note, that for some special chars you need to place them in ''
 
     type: custom:simple-date-time-clock-card
