@@ -26,6 +26,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 | `time_font_size` | `string` | `5em` | Size of the text of the time. Unit is up to you |
 | `time_separator_char` | `string` | `:` | Sets the char that is displayed between the hours and minutes or minutes and seconds |
 | `time_separator_blink` | `bool` | `false` | Let the `time_separator_char` blink each second. Could also be usefull if seconds aren't displayed |
+| | | | |
 | `time_hours_24` | `bool` | `true` | Enables or disables the clock in 24h style. Else it would be 12h with AM/PM |
 | `time_hours_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
 | `time_minutes_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
@@ -44,6 +45,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 | `date_separator_char` | `string` | `.` | Sets the char that is displayed between the day and the month or the month and the year |
 | `date_font_size` | `string` | `2em` | Size of the text of the date. Unit is up to you |
 | `date_us_format` | `bool` | `false` | Sets the date format to us(MM.DD.YYYY) insteat the eu/default(DD.MM.YYYY) format |
+| | | | |
 | `date_days_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
 | `date_week_day_name_show` | `bool` | `true` | Sets the visibility of the name of the week. |
 | `date_week_day_name_long` | `bool` | `false` | Sets the length of the name of the week. Fri <=> Friday |
