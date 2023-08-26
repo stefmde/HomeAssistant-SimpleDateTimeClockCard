@@ -3,7 +3,7 @@
 ![Header image to show a sample of this card](img/header.png)
 
 ## Description
-This card should be an easy to configure and bring you rich features on the same time. Also for that reason you can find all properties to configure, an explanation of them and samples below.
+This card for home assistant is easy to configure and bring you rich features on the same time. Also for that reason you can find all properties to configure, an explanation of them and samples below.
 Currently there are 29 or more properties. But don't worry, you don't need to set any of them to get a good result (See sample `No special config`).
 
 ## Properties
