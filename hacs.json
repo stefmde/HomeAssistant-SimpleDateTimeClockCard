@@ -1,4 +1,5 @@
 {
     "name": "Simple Date Time Clock Card",
-    "render_readme": true
+    "render_readme": true,
+    "filename": "simpleDateTimeClockCard.js"
 }
