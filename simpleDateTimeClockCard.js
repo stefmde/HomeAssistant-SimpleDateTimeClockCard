@@ -41,6 +41,8 @@ class SimpleDateTimeClockCard extends HTMLElement
             function getTime(today)
             {
                 let time_show = config.time_show !== undefined ? config.time_show : true;
+                let time_separator_char = config.time_separator_char !== undefined ? config.time_separator_char : ":";
+                let time_separator_blink = config.time_separator_blink !== undefined ? config.time_separator_blink : false;
                 let time_hours_24 = config.time_hours_24 !== undefined ? config.time_hours_24 : true;
                 let time_hours_lead_zero = config.time_hours_lead_zero !== undefined ? config.time_hours_lead_zero : true;
                 let time_minutes_lead_zero = config.time_minutes_lead_zero !== undefined ? config.time_minutes_lead_zero : true;
@@ -48,8 +50,6 @@ class SimpleDateTimeClockCard extends HTMLElement
                 let time_seconds_lead_zero = config.time_seconds_lead_zero !== undefined ? config.time_seconds_lead_zero : true;
                 let time_seconds_font_size = config.time_seconds_font_size !== undefined ? config.time_seconds_font_size : config.time_font_size;
                 let time_seconds_visibility_percentage = config.time_seconds_visibility_percentage !== undefined ? config.time_seconds_visibility_percentage : "100%";
-                let time_seperator_char = config.time_seperator !== undefined ? config.time_seperator : ":";
-                let time_seperator_blink = config.time_seperator_blink !== undefined ? config.time_seperator_blink : false;
 
                 if(!time_show) return "";
 
@@ -62,11 +62,16 @@ class SimpleDateTimeClockCard extends HTMLElement
                 m = time_minutes_lead_zero ? addZero(m) : m;
                 s = time_seconds_lead_zero ? addZero(s) : s;
 
-                let time_seperator_char_current = s % 2 == 0 || !time_seperator_blink ? time_seperator_char : " ";
+                let time_separator_char_current = s % 2 == 0 || !time_separator_blink ? time_separator_char : " ";
 
-                let time_str = 
-                (time_hours_24 ? h : ((h + 11) % 12) + 1 ) + // HOUR
-                time_seperator_char_current + m; // MINUTE
+                let time_str = h;
+                // HOUR
+                if(!time_hours_24 && h >= 13)
+                {
+                    time_str = h - 12;
+                }
+                
+                time_str += time_separator_char_current + m; // MINUTE
 
                 if(time_seconds_show) // SECONDS
                 {
@@ -78,11 +83,11 @@ class SimpleDateTimeClockCard extends HTMLElement
                     time_str += "color: color-mix(in srgb, " + foregroundColor + " " + time_seconds_visibility_percentage + ", " + backgroundColor + ");"
 
                     time_str += "\">";
-                    time_str += time_seperator_char_current + s;
+                    time_str += time_separator_char_current + s;
                     time_str += "</span>";
                 }
 
-                (time_hours_24 ? "" : " " + p ); // AM/PM
+                time_str += (time_hours_24 ? "" : " " + p ); // AM/PM
 
                 return time_str;
             }
@@ -91,7 +96,7 @@ class SimpleDateTimeClockCard extends HTMLElement
             {
                 let date_show = config.date_show !== undefined ? config.date_show : true;
                 let date_locale = config.date_locale !== undefined ? config.date_locale : "en-US";
-                let date_seperator_char = config.date_seperator_char !== undefined ? config.date_seperator_char : ".";
+                let date_separator_char = config.date_separator_char !== undefined ? config.date_separator_char : ".";
                 let date_us_format = config.date_us_format !== undefined ? config.date_us_format : false;
                 let date_week_day_name_show = config.date_week_day_name_show !== undefined ? config.date_week_day_name_show : true;
                 let date_week_day_name_long = config.date_week_day_name_long !== undefined ? config.date_week_day_name_long : false;
@@ -111,11 +116,11 @@ class SimpleDateTimeClockCard extends HTMLElement
 
                 d = date_days_lead_zero ? addZero(d) : d;
                 m = date_months_lead_zero ? addZero(m) : m;
-                y = date_year_two_digit ? y.subString(2) : y;
+                y = date_year_two_digit ? y.toString().substring(2) : y;
 
                 let date_str = 
                 (date_week_day_name_show ? wn + " " : "") + // WeekDayName
-                (date_us_format ? m + date_seperator_char + d + date_seperator_char : d + date_seperator_char + m + date_seperator_char) + 
+                (date_us_format ? m + date_separator_char + d + date_separator_char : d + date_separator_char + m + date_separator_char) + 
                 y +
                 (date_week_number_show ? " " + date_week_number_label + w : ""); // KW
 

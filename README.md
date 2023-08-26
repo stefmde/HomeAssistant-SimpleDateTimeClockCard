@@ -24,8 +24,8 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 |--|--|--|--|
 | `time_show` | `bool` | `true` | Sets the visibility of the time |
 | `time_font_size` | `string` | `5em` | Size of the text of the time. Unit is up to you |
-| `time_seperator_char` | `string` | `:` | Sets the char that is displayed between the hours and minutes or minutes and seconds |
-| `time_seperator_blink` | `bool` | `false` | Let the `time_seperator_char` blink each second. Could also be usefull if seconds aren't displayed |
+| `time_separator_char` | `string` | `:` | Sets the char that is displayed between the hours and minutes or minutes and seconds |
+| `time_separator_blink` | `bool` | `false` | Let the `time_separator_char` blink each second. Could also be usefull if seconds aren't displayed |
 | `time_hours_24` | `bool` | `true` | Enables or disables the clock in 24h style. Else it would be 12h with AM/PM |
 | `time_hours_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
 | `time_minutes_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
@@ -41,7 +41,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 |--|--|--|--|
 | `date_show` | `bool` | `true` | Sets the visibility of the date |
 | `date_locale` | `string` | `en-US` | The locale is used to translate the name of the week. See `date_week_day_name_show` |
-| `date_seperator_char` | `string` | `.` | Sets the char that is displayed between the day and the month or the month and the year |
+| `date_separator_char` | `string` | `.` | Sets the char that is displayed between the day and the month or the month and the year |
 | `date_font_size` | `string` | `2em` | Size of the text of the date. Unit is up to you |
 | `date_us_format` | `bool` | `false` | Sets the date format to us(MM.DD.YYYY) insteat the eu/default(DD.MM.YYYY) format |
 | `date_days_lead_zero` | `bool` | `true` | Forces the value to two digits: 9 -> 09 |
@@ -69,6 +69,15 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
     type: custom:simple-date-time-clock-card
 
 
+### US
+![Header image to show a sample of this card](img/us-config.png)
+
+    type: custom:simple-date-time-clock-card
+    date_us_format: true
+    date_seperator_char: /
+    time_hours_24: false
+
+
 ### Minimal UI
 ![Header image to show a sample of this card](img/minimal-ui-config.png)
 
@@ -76,6 +85,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
     time_hours_24: true
     time_seconds_show: false
     date_week_day_name_show: false
+    date_year_two_digit: true
 
 
 ### Just the Clock
@@ -96,8 +106,13 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
     date_week_day_name_show: true
 
 
-## ToDo
+### Separators
+![Header image to show a sample of this card](img/separators-config.png)
+Please note, that for some special chars you need to place them in ''
 
- 1. Sample with us date format
- 2. Sample for time/date seperators
- 3. Sample for two digit year
+    type: custom:simple-date-time-clock-card
+    time_separator_char: '-'
+    date_separator_char: +
+
+
+## ToDo
