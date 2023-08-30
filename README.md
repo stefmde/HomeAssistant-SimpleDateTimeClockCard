@@ -1,6 +1,6 @@
 
 # Simple Date Time Clock Card for HomeAssistant
-![Header image to show a sample of this card](img/header.png)
+![Header image to show a sample of this card](https://raw.githubusercontent.com/stefmde/HomeAssistantSimpleDateTimeClockCard/0e3e401b2cac73182ac525d7ce33b88ce2107278/img/no-special-config.png)
 
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
@@ -61,7 +61,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 ## Samples
 ### My favorit
-![Sample image to show the config](img/header.png)
+![Sample image to show the config](https://raw.githubusercontent.com/stefmde/HomeAssistantSimpleDateTimeClockCard/0e3e401b2cac73182ac525d7ce33b88ce2107278/img/header.png)
 
     type: custom:simple-date-time-clock-card
 	time_seconds_visibility_percentage: 30%
@@ -70,13 +70,13 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### No special config
-![Sample image to show the config](img/no-special-config.png)
+![Sample image to show the config](https://raw.githubusercontent.com/stefmde/HomeAssistantSimpleDateTimeClockCard/0e3e401b2cac73182ac525d7ce33b88ce2107278/img/no-special-config.png)
 
     type: custom:simple-date-time-clock-card
 
 
 ### US
-![Sample image to show the config](img/us-config.png)
+![Sample image to show the config](https://raw.githubusercontent.com/stefmde/HomeAssistantSimpleDateTimeClockCard/0e3e401b2cac73182ac525d7ce33b88ce2107278/img/us-config.png)
 
     type: custom:simple-date-time-clock-card
     date_us_format: true
@@ -85,7 +85,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### Minimal UI
-![Sample image to show the config](img/minimal-ui-config.png)
+![Sample image to show the config](https://raw.githubusercontent.com/stefmde/HomeAssistantSimpleDateTimeClockCard/0e3e401b2cac73182ac525d7ce33b88ce2107278/img/minimal-ui-config.png)
 
     type: custom:simple-date-time-clock-card
     time_seconds_show: false
@@ -94,7 +94,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### Just the Clock
-![Sample image to show the config](img/just-the-clock-config.png)
+![Sample image to show the config](https://raw.githubusercontent.com/stefmde/HomeAssistantSimpleDateTimeClockCard/0e3e401b2cac73182ac525d7ce33b88ce2107278/img/just-the-clock-config.png)
 
     type: custom:simple-date-time-clock-card
     time_seconds_show: true
@@ -102,7 +102,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### Just the Date
-![Sample image to show the config](img/just-the-date-config.png)
+![Sample image to show the config](https://raw.githubusercontent.com/stefmde/HomeAssistantSimpleDateTimeClockCard/0e3e401b2cac73182ac525d7ce33b88ce2107278/img/just-the-date-config.png)
 
     type: custom:simple-date-time-clock-card
     time_show: false
@@ -111,7 +111,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
 
 ### Separators
-![Sample image to show the config](img/separators-config.png)
+![Sample image to show the config](https://raw.githubusercontent.com/stefmde/HomeAssistantSimpleDateTimeClockCard/0e3e401b2cac73182ac525d7ce33b88ce2107278/img/separators-config.png)
 
 Please note, that for some special chars you need to place them in ''
 
