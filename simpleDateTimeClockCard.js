@@ -101,7 +101,7 @@ class SimpleDateTimeClockCard extends HTMLElement
                 let date_week_day_name_show = config.date_week_day_name_show !== undefined ? config.date_week_day_name_show : true;
                 let date_week_day_name_long = config.date_week_day_name_long !== undefined ? config.date_week_day_name_long : false;
                 let date_days_lead_zero = config.date_days_lead_zero !== undefined ? config.date_days_lead_zero : true;
-                let date_months_lead_zero = config.date_months_lead_zero !== undefined ? config.date_months_lead_zero : false;
+                let date_months_lead_zero = config.date_months_lead_zero !== undefined ? config.date_months_lead_zero : true;
                 let date_week_number_show = config.date_week_number_show !== undefined ? config.date_week_number_show : false;
                 let date_week_number_label = config.date_week_number_label !== undefined ? config.date_week_number_label : "KW";
                 let date_year_two_digit = config.date_year_two_digit !== undefined ? config.date_year_two_digit : false;
@@ -109,7 +109,7 @@ class SimpleDateTimeClockCard extends HTMLElement
                 if(!date_show) return "";
 
                 let d = today.getDate(); // the day of the month (from 1-31)
-                let m = today.getMonth(); // the month (from 0-11)
+                let m = today.getMonth()+1; // the month (from 0-11)
                 let y = today.getFullYear(); // 0000
                 let w = getWeekNumber(today);
                 let wn = getWeekDayName(today, date_locale, date_week_day_name_long);
