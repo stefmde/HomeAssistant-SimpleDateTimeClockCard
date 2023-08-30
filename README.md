@@ -80,7 +80,7 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 
     type: custom:simple-date-time-clock-card
     date_us_format: true
-    date_seperator_char: /
+    date_separator_char: /
     time_hours_24: false
 
 
@@ -88,7 +88,6 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 ![Sample image to show the config](img/minimal-ui-config.png)
 
     type: custom:simple-date-time-clock-card
-    time_hours_24: true
     time_seconds_show: false
     date_week_day_name_show: false
     date_year_two_digit: true
@@ -98,7 +97,6 @@ Currently there are 29 or more properties. But don't worry, you don't need to se
 ![Sample image to show the config](img/just-the-clock-config.png)
 
     type: custom:simple-date-time-clock-card
-    time_hours_24: true
     time_seconds_show: true
     date_show: false
 
